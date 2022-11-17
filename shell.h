@@ -23,6 +23,7 @@
 #define CMD_AND		2
 #define CMD_CHAIN	3
 
+
 /* for convert_number() */
 #define CONVERT_LOWERCASE	1
 #define CONVERT_UNSIGNED	2
@@ -89,7 +90,7 @@ typedef struct passinfo
 	int env_changed;
 	int status;
 
-	char *cmd_buf; / pointer to cmd ; chain buffer, for memory mangement */
+	char *cmd_buf; /* pointer to cmd ; chain buffer, for memory mangement */
 	int cmd_buf_type; /* CMD_type ||, &&, ; */
 	int readfd;
 	int histcount;
@@ -112,7 +113,7 @@ typedef struct builtin
 
 
 /* toem_shloop.c */
-int hsh(info_t , char *);
+int hsh(info_t, char *);
 int find_builtin(info_t *);
 void find_cmd(info_t *);
 void fork_cmd(info_t *);
@@ -184,12 +185,12 @@ int _myalias(info_t *);
 
 /*toem_getline.c */
 ssize_t get_input(info_t *);
-int _getline(info_t , char *, size_t *);
+int _getline(info_t, char *, size_t *);
 void sigintHandler(int);
 
 /* toem_getinfo.c */
 void clear_info(info_t *);
-void set_info(info_t , char *);
+void set_info(info_t, char *);
 void free_info(info_t *, int);
 
 /* toem_environ.c */
